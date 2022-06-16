@@ -1,18 +1,15 @@
 import pandas as pd
 import numpy as np
-# import plotly.graph_objects as go
-import plotly.colors as col
 import plotly.express as px
 import os
-# import warnings
-# warnings.filterwarnings("ignore")
+import warnings
+warnings.filterwarnings("ignore")
 
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
-my_file = os.path.join(THIS_FOLDER, 'Directional Survey Data.xlsx')
+my_file = os.path.join(THIS_FOLDER, 'Directional Survey Data_6.15.2022.xlsx')
 
 new = pd.read_excel(my_file)
 
-# new = df[df["WELL NAME"] == "FAT TIRE A 1H"]
 md = new["MD"].tolist()
 tvd = new["TVDCalc"].tolist()
 inc = new["Inclination"].tolist()

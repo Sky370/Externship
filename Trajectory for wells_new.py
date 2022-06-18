@@ -1,7 +1,5 @@
 import pandas as pd
 import numpy as np
-# import plotly.graph_objects as go
-import plotly.colors as col
 import plotly.express as px
 import os
 # import warnings

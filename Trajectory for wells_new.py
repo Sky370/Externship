@@ -15,10 +15,9 @@ fig = px.line_3d(new, x="NSCalc", y="EWCalc", z=[-x for x in tvd], color="WELL N
     "NSCalc":"North-South", 
     "EWCalc":"East-West", 
     "z":"TVD",
-    "WELL NAME":"WELL NAMES"
     })
 
-fig1 = px.line(new, x= "NSCalc", y="DLSCalc", labels={
+fig1 = px.line(new[new["WELL NAME"] == "BIGHORN PASS H06 BH"], x= "NSCalc", y="DLSCalc", labels={
     "NSCalc":"North-South",
     "DLSCalc":"DLS"
 })

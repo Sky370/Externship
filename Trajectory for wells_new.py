@@ -1,5 +1,5 @@
 import pandas as pd
-import numpy as np
+import pickle
 import plotly.express as px
 import os
 # import warnings
@@ -29,10 +29,14 @@ fig = px.line_3d(new, x="NSCalc", y="EWCalc", z=[-x for x in tvd], color="WELL N
     "WELL NAME":"WELL NAMES"
     })
 
-fig1 = px.line(new[new["WELL NAME"] == "BIGHORN PASS H06 BH"], x= "NSCalc", y="DLSCalc", labels={
+fig1 = px.line(new, x= "NSCalc", y="DLSCalc", color="WELL NAME", labels={
     "NSCalc":"North-South",
     "DLSCalc":"DLS"
 })
 fig.update_traces(line_width=2.5)
+
+fig2 = px.line(new, x="TVDCalc", y="3D Tortuosity Index", color="WELL NAME")
+
 fig.show()
 fig1.show()
+fig2.show()

@@ -27,6 +27,7 @@ def write_info_into_pickle(input_file, output_file):
 # writing data from different folders into one pickle file with multi-layer dict data structures
 write_info_into_pickle(data, 'GOM_production_dict.pickle')
 
-fr00 = open('GOM_production_dict.pickle','rb')  
+fr00 = open('survey_new.pickle','rb')  
 all_prod_ref1 = pickle.load(fr00)  
 fr00.close()
+print(all_prod_ref1)

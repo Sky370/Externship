@@ -40,4 +40,4 @@ def call(name):
     print("TVD is: {}".format(round(abs(z[-1]), 2)))
     return
 
-call("DIETZ OL UNIT 3H")
+call("LEVI GOODRICH UNIT 2 2H")

@@ -10,7 +10,8 @@ my_file = os.path.join(THIS_FOLDER, 'Matlab.xlsx')
 
 df = pd.read_excel(my_file)
 fig = px.scatter(df, x="Torque", y="TVDCalc", color="Color", labels={
-    "TVDCalc":"MD"
+    "TVDCalc":"MD [ft]",
+    "Torque":"Torque [klbf/ft]"
 })
 fig.update_yaxes(autorange="reversed")
 fig.show()

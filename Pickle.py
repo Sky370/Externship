@@ -3,7 +3,7 @@ import pandas as pd
 import os
 
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
-my_file = os.path.join(THIS_FOLDER, 'Directional Survey Data_6.15.2022.xlsx')
+my_file = os.path.join(THIS_FOLDER, 'DATA.csv')
 
 df = pd.read_excel(my_file)
 

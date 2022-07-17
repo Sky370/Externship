@@ -12,6 +12,7 @@ my_file = os.path.join(THIS_FOLDER, 'Directional Survey Data_6.15.2022.xlsx')
 new = pd.read_excel(my_file)
 tvd = [-x for x in new["TVDCalc"].tolist()]
 sortedwells = list(set(new["WELL NAME"]))
+# sortedwells.pop(0)
 sortedwells.sort()
 
 Build_rad = []
@@ -45,7 +46,7 @@ fig1 = px.line(new, x= "NSCalc", y="DLSCalc", color="WELL NAME", labels={
 })
 fig.update_traces(line_width=2.5)
 
-fig2 = px.line(new, x="TVDCalc", y="3D Tortuosity Index", color="WELL NAME")
+fig2 = px.line(new, x="TVDCalc", y="3D_Tortuosity_Index", color="WELL NAME")
 fig3 = px.line(new, x="NSCalc", y=tvd, color="WELL NAME", labels={
     "NSCalc":"North-South",
     "y":"TVD"
@@ -55,5 +56,3 @@ fig.show()
 fig1.show()
 fig2.show()
 fig3.show()
-
-B = (85.45-0.67)/(10584-9156)
